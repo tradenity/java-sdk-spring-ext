@@ -34,6 +34,11 @@ public class TradenitySDKConfig {
     }
 
     @Bean
+    public AddressService addressService(){
+        return new AddressService(client());
+    }
+
+    @Bean
     public BrandService brandService(){
         return new BrandService(client());
     }
@@ -49,8 +54,8 @@ public class TradenitySDKConfig {
     }
 
     @Bean
-    public ProductService productService(){
-        return new ProductService(client());
+    public CurrencyService currencyService(){
+        return new CurrencyService(client());
     }
 
     @Bean
@@ -59,8 +64,8 @@ public class TradenitySDKConfig {
     }
 
     @Bean
-    public ShoppingCartService shoppingCartService(){
-        return new ShoppingCartService(client());
+    public GatewayService gatewayService(){
+        return new GatewayService(client());
     }
 
     @Bean
@@ -69,7 +74,28 @@ public class TradenitySDKConfig {
     }
 
     @Bean
-    public  TradenityServices services(){
-        return new TradenityServices();
+    public ProductService productService(){
+        return new ProductService(client());
     }
+
+    @Bean
+    public ShippingMethodService shippingMethodService(){
+        return new ShippingMethodService(client());
+    }
+
+    @Bean
+    public ShoppingCartService shoppingCartService(){
+        return new ShoppingCartService(client());
+    }
+
+    @Bean
+    public TaxService taxService(){
+        return new TaxService(client());
+    }
+
+    @Bean
+    public TransactionService transactionService(){
+        return new TransactionService(client());
+    }
+
 }
