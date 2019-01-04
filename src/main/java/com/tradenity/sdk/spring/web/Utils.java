@@ -6,10 +6,6 @@ import org.springframework.data.domain.Pageable;
 
 import javax.servlet.http.HttpServletRequest;
 
-/**
- * Created by joseph
- * on 9/2/16.
- */
 public class Utils {
     public static PageRequest pageRequest(Pageable p){
         return new PageRequest(p.getPageNumber(), p.getPageSize(), p.getOffset());

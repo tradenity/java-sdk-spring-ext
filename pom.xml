@@ -4,14 +4,38 @@
     <groupId>com.tradenity</groupId>
     <artifactId>java-sdk-spring-ext</artifactId>
     <packaging>jar</packaging>
-    <version>0.8.0</version>
-    <name>java-sdk-spring-ext Maven Library</name>
-    <url>http://maven.apache.org</url>
+    <version>1.0.0</version>
+    <name>tradenity-java-sdk-spring-extensions</name>
+    <description>
+        Simple library that allow straightforward and seamless integration between Tradenity's session and Spring MVC session.
+    </description>
+    <url>http://github.com/tradenity/java-sdk-spring-ext</url>
+
+    <licenses>
+        <license>
+            <name>Apache Software License</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>Joseph Fouad</name>
+            <email>josephfouad@tradenity.com</email>
+            <organization>Tradenity</organization>
+            <organizationUrl>https://www.tradenity.com</organizationUrl>
+        </developer>
+    </developers>
+    <scm>
+        <connection>scm:git:git://github.com/tradenity/java-sdk-spring-ext.git</connection>
+        <developerConnection>scm:git:ssh://github.com:tradenity/java-sdk-spring-ext.git</developerConnection>
+        <url>https://github.com/tradenity/java-sdk-spring-ext/tree/master</url>
+    </scm>
+
     <dependencies>
         <dependency>
             <groupId>com.tradenity</groupId>
             <artifactId>java-sdk</artifactId>
-            <version>0.8.0</version>
+            <version>1.0.0</version>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -55,13 +79,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-    <repositories>
-        <repository>
-            <id>tradenity-public</id>
-            <name>tradenity-release-public</name>
-            <url>http://artifacts.tradenity.com/artifactory/tradenity-release-public</url>
-        </repository>
-    </repositories>
     <build>
         <finalName>java-sdk-spring-ext</finalName>
         <plugins>
@@ -77,8 +94,64 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.10.3</version>
+                <version>3.0.0</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.0.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.8</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>false</autoReleaseAfterClose>
+                </configuration>
             </plugin>
         </plugins>
     </build>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
 </project>

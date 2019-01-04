@@ -6,10 +6,6 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpSession;
 
-/**
- * Created by joseph
- * on 1/13/16.
- */
 public class SpringMvcSessionProvider implements SessionTokenStore {
     public static final String AUTH_TOKEN_ATTRIBUTE_NAME = "auth_token_attribute";
 
