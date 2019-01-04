@@ -11,15 +11,8 @@ Welcome to the Spring framework extensions for Tradenity Java SDK
 
 ## Installation
 
-The SDK is available through our maven repository, You can install it using any compatible tool.
+The SDK is available through maven central, You can install it using any compatible tool.
 
-```xml
-<repository>
-    <id>tradenity-public</id>
-    <name>tradenity-public-releases</name>
-    <url>http://artifacts.tradenity.com/artifactory/tradenity-release-public</url>
-</repository>
-```
 
 ### Maven
 
@@ -27,7 +20,7 @@ The SDK is available through our maven repository, You can install it using any 
 <dependency>
     <groupId>com.tradenity</groupId>
     <artifactId>java-sdk-spring-ext</artifactId>
-    <version>0.8.0</version>
+    <version>1.0.0</version>
 </dependency>
 
 ```
@@ -36,13 +29,13 @@ The SDK is available through our maven repository, You can install it using any 
 
 Add this line to the `dependency section`
 
-`compile com.tradenity:java-sdk-spring-ext:0.8.0`
+`compile com.tradenity:java-sdk-spring-ext:1.0.0`
 
 ### Ivy
 
 ```xml
 
-<dependency org="com.tradenity" name="java-sdk-spring-ext" rev="0.8.0"/>
+<dependency org="com.tradenity" name="java-sdk-spring-ext" rev="1.0.0"/>
 
 ```
 
