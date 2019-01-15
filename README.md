@@ -20,7 +20,7 @@ The SDK is available through maven central, You can install it using any compati
 <dependency>
     <groupId>com.tradenity</groupId>
     <artifactId>java-sdk-spring-ext</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 </dependency>
 
 ```
@@ -29,13 +29,13 @@ The SDK is available through maven central, You can install it using any compati
 
 Add this line to the `dependency section`
 
-`compile com.tradenity:java-sdk-spring-ext:1.0.0`
+`compile com.tradenity:java-sdk-spring-ext:1.0.1`
 
 ### Ivy
 
 ```xml
 
-<dependency org="com.tradenity" name="java-sdk-spring-ext" rev="1.0.0"/>
+<dependency org="com.tradenity" name="java-sdk-spring-ext" rev="1.0.1"/>
 
 ```
 

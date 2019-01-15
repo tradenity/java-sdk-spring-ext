@@ -4,7 +4,7 @@
     <groupId>com.tradenity</groupId>
     <artifactId>java-sdk-spring-ext</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <name>tradenity-java-sdk-spring-extensions</name>
     <description>
         Simple library that allow straightforward and seamless integration between Tradenity's session and Spring MVC session.
@@ -31,11 +31,15 @@
         <url>https://github.com/tradenity/java-sdk-spring-ext/tree/master</url>
     </scm>
 
+    <properties>
+        <spring.version>4.3.17.RELEASE</spring.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>com.tradenity</groupId>
             <artifactId>java-sdk</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -45,27 +49,27 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
-            <version>4.2.4.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-beans</artifactId>
-            <version>4.2.4.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>4.2.4.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
-            <version>4.2.4.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>4.2.4.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.data</groupId>

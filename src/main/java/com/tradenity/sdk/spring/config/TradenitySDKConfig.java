@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
 public class TradenitySDKConfig {
 
 
-    @Value("${tradenity.endpoint:api.tradenity.com/v1/}")
+    @Value("${tradenity.endpoint:https://api.tradenity.com/v1/}")
     public String apiEndpoint;
 
     @Value("${tradenity.publicKey}")
